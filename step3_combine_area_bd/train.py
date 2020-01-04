@@ -129,7 +129,7 @@ if __name__ == '__main__':
 
     # (1) get param from pre-trained model
     # from unet_3up_ab_toge.unet.unet_model import UNet as UNet_old
-    from unet_3up_ab.unet_model import UNet as UNet_old
+    from unet.unet_model import UNet as UNet_old
     net_old = UNet_old(n_channels=3, n_classes=1)
     net_old.load_state_dict(torch.load('../load_model_from_step2_add_bd_branch/load_model_from_2ab_fixa/CPxx.pth'))
     net_old_dict = net_old.state_dict()

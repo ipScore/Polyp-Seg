@@ -82,7 +82,7 @@ def train_net(image_dir, label_dir, boundary_dir, checkpoint_dir, net, epochs=30
             # print('loss_bd_cons2', loss_bd_cons2)
 
             # total_loss
-            loss = loss_area + loss_bd + loss_bd_cons1 + loss_bd_cons2
+            loss = loss_area + loss_bd + loss_bd_cons1 + 0.5*loss_bd_cons2
 
             loss.backward()
             optimizer.step()
